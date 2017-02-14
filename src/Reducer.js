@@ -226,7 +226,7 @@ function inject(state, action, props, scenes) {
       if (action.unmountScenes) {
         resetHistoryStack(state.children[ind]);
       }
-      return { ...state, index: ind };
+      return { ...state, index: ind, name: props.name };
     }
     case ActionConst.REPLACE:
       if (state.children[state.index].sceneKey === action.key) {
